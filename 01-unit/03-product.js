@@ -1,7 +1,7 @@
 // ==================================================
 // DEFINE FUNCTION(S)
 // ==================================================
-function product() {
+function sum() {
 
 }
 
@@ -12,29 +12,49 @@ try {
   // --------------------------------------------------
   // Test Case 1
   // --------------------------------------------------
-  // It should return the product of two numbers.
-  var result = product(2, 2);
-  if (result !== 4) throw new Error('Expected product(2, 2) to be 4. Received: ' + result);
+  // It should return the sum of two numbers.
+
+  const num1 = 5;
+const num2 = 3;
+
+// add two numbers
+const sum = num1 * num2;
+
+// display the sum
+console.log('The sum of ' + num1 + ' and ' + num2 + ' is: ' + sum);
+
+
+  var result = sum(1, 1);
+  if (result !== 2) throw new Error('Expected sum(1, 1) to be 2. Received: ' + result);
 
   // --------------------------------------------------
   // Test Case 2
   // --------------------------------------------------
-  // It should return 0 when either of the numbers are 0.
+  // It should ignore additional numbers.
+
+  questionText = questionText.replace(/[0-9]/g, '');
 
   // --------------------------------------------------
   // Test Case 3
   // --------------------------------------------------
-  // It should ignore additional numbers.
+  // When invoked with only 1 number, it should return that number.
+  const myInt = 5;
+const myFloat = 6.667;
+myInt;
+myFloat;
 
   // --------------------------------------------------
   // Test Case 4
   // --------------------------------------------------
-  // When invoked with only 1 number, it should return that number.
-
-  // --------------------------------------------------
-  // Test Case 5
-  // --------------------------------------------------
   // When invoked with no numbers, it should return 0.
+
+  function findSmallestNumberAmongMixedElements(arr) {
+    var shortest = arr.filter(function (a, b) {
+        return typeof a === 'number' ? 0 : a - b;
+    });
+    if (shortest.length === 0) return 0;
+    return Math.min.apply(null, shortest);
+}
 
   console.log('All tests passed successfully.');
 
